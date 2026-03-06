@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Projects from "@/components/Projects.tsx";
 import ProjectDetail from "@/pages/ProjectDetail.tsx";
+import TinyTalesBook from "@/pages/TinyTalesBook.tsx";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="" element={<Index />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="projects" element={<Projects/>}/>
+          <Route path="/tiny-tales-book" element={<TinyTalesBook />} />
           <Route path="*" element={<NotFound />} />
 
         </Routes>
