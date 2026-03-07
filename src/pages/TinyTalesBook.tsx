@@ -144,8 +144,8 @@ export default function TinyTalesBook() {
                                 onChange={(e) => setGender(e.target.value)}
                             >
                                 <option value="">Zgjidh</option>
-                                <option value="djalë">Djalë</option>
-                                <option value="vajzë">Vajzë</option>
+                                <option value="djale">Djalë</option>
+                                <option value="vajze">Vajzë</option>
                             </select>
                         </div>
 
