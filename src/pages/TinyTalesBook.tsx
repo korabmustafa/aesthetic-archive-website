@@ -5,7 +5,6 @@ export default function TinyTalesBook() {
     const [age, setAge] = useState("");
     const [gender, setGender] = useState("");
     const [language, setLanguage] = useState("");
-    const [renderedName, setRenderedName] = useState("");
 
     const [nameNom, setNameNom] = useState("");
     const [nameGen, setNameGen] = useState("");
@@ -25,7 +24,7 @@ export default function TinyTalesBook() {
         setMessage("");
         setMessageType("");
 
-        if (!childName || !age || !gender || !language || !renderedName) {
+        if (!childName || !age || !gender || !language) {
             setMessage("Please fill in all required fields.");
             setMessageType("error");
             return;
@@ -45,7 +44,6 @@ export default function TinyTalesBook() {
             form.append("age", age);
             form.append("gender", gender);
             form.append("language", language);
-            form.append("rendered_name", renderedName);
 
             form.append("name_nom", nameNom);
             form.append("name_gen", nameGen);
@@ -75,7 +73,6 @@ export default function TinyTalesBook() {
             setAge("");
             setGender("");
             setLanguage("");
-            setRenderedName("");
             setNameNom("");
             setNameGen("");
             setNameDat("");
@@ -163,18 +160,6 @@ export default function TinyTalesBook() {
                                 <option value="english">English</option>
                             </select>
                         </div>
-                    </div>
-
-                    <div style={styles.field}>
-                        <label style={styles.label}>
-                            Emri i shfaqur <span style={styles.required}>*</span>
-                        </label>
-                        <input
-                            style={styles.input}
-                            value={renderedName}
-                            onChange={(e) => setRenderedName(e.target.value)}
-                            placeholder="Emri që do të shfaqet në libër"
-                        />
                     </div>
 
                     <div style={styles.field}>
